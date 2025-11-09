@@ -184,28 +184,7 @@ All generated code was **reviewed, optimized, and tested manually**.
 ## High-Level Flow (ASCII Diagram)
 
 ```
-        ┌────────────┐       ┌──────────────┐
-        │ Binance API│──────▶│ Collector    │
-        └────────────┘       │ (Async Feed) │
-                             └─────┬────────┘
-                                   │
-                                   ▼
-                            ┌────────────┐
-                            │ MongoDB DB │
-                            └─────┬──────┘
-                                   │
-           ┌────────────────────────┴────────────────────────┐
-           ▼                                                 ▼
-   ┌──────────────────────┐                       ┌──────────────────────┐
-   │ Django REST Backend  │                       │ Analytics Engine     │
-   │  /api endpoints      │                       │ RSI, MACD, ATR, etc. │
-   └──────────┬───────────┘                       └──────────┬───────────┘
-              │                                              │
-              ▼                                              ▼
-        ┌────────────────────────────────────────────────────────┐
-        │               Streamlit Frontend UI                    │
-        │  Multi-symbol charting, pair analytics, correlations   │
-        └────────────────────────────────────────────────────────┘
+![Architecture Diagram](architecture.png)
 ```
 
 ---
