@@ -170,22 +170,13 @@ All generated code was **reviewed, optimized, and tested manually**.
 
 ## System Architecture
 
-![Architecture Diagram](architecture.png)  
-[Download `.drawio` source](architecture.drawio)
+![Architecture Diagram](architecture.png)
 
 ### Flow Overview
 1. Binance WebSocket streams → Collector → MongoDB  
 2. Django REST API → Aggregates OHLCV + analytics  
 3. Analytics Engine → Computes indicators & stats  
 4. Streamlit → Interactive dashboard visualization  
-
----
-
-## High-Level Flow (ASCII Diagram)
-
-```
-![Architecture Diagram](architecture.png)
-```
 
 ---
 
